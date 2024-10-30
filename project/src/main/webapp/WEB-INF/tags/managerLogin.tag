@@ -50,7 +50,7 @@
                             <nav class="mainmenu">
                                 <ul>
                                     <!-- 내비게이션 메뉴 시작 -->
-                                    <li><a href="productListPage.do?product_searchContent=null&product_searchKeyword=null">관리자 메인</a></li>
+                                    <li><a href="managerMain.do">관리자 메인</a></li>
                                     <li><a href="productListPage.do?product_searchContent=null&searchKeyword=null">상품검색</a></li>
                                     <li><a>관리자 메뉴</a>
                                    <ul class="dropdown">

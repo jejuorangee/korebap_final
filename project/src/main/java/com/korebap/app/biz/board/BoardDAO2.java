@@ -29,12 +29,16 @@ public class BoardDAO2 { // 게시판
 	private final String NOTICE_TOTAL_COUNT = "SELECT COUNT(*) AS NOTICE_TOTAL_COUNT FROM BOARD b JOIN MEMBER m ON b.BOARD_WRITER_ID = m.MEMBER_ID WHERE m.MEMBER_ROLE = 'ADMIN'";
 	
 	// 페이지별 데이터
-	private final String NOTICE_SELECT_ALL = "SELECT B.BOARD_NUM, B.BOARD_TITLE, BOARD_WRITER_ID, M.MEMBER_NICKNAME, BOARD_REGISTRATION_DATE\r\n"
-			+ "FROM BOARD B\r\n"
-			+ "JOIN MEMBER M ON B.BOARD_WRITER_ID = '12@naver.com'\r\n"
-			+ "WHERE M.MEMBER_ROLE = 'ADMIN'\r\n"
-			+ "ORDER BY B.BOARD_NUM DESC\r\n"
-			+ "LIMIT ?, 10";
+		private final String NOTICE_SELECT_ALL = "SELECT B.BOARD_NUM, B.BOARD_TITLE, B.BOARD_WRITER_ID, M.MEMBER_NICKNAME, B.BOARD_REGISTRATION_DATE \r\n"
+				+ "FROM BOARD B \r\n"
+				+ "JOIN MEMBER M ON B.BOARD_WRITER_ID = M.MEMBER_ID \r\n"
+				+ "WHERE M.MEMBER_ID IN (\r\n"
+				+ "    SELECT MEMBER_ID \r\n"
+				+ "    FROM MEMBER \r\n"
+				+ "    WHERE MEMBER_ROLE = 'ADMIN'\r\n"
+				+ ") \r\n"
+				+ "ORDER BY B.BOARD_NUM DESC \r\n"
+				+ "LIMIT ?, 10";
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 	private final String BOARD_USER_SELECTONE_COUNT = "SELECT COUNT(B.BOARD_NUM) AS TOTAL_CNT FROM BOARD B JOIN MEMBER M ON B.BOARD_WRITER_ID = M.MEMBER_ID WHERE M.MEMBER_ROLE='USER'";
 	// 공지사항 총 개수
