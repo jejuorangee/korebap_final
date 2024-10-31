@@ -34,7 +34,7 @@
 
 html, body {
 	height: 100%;
-	font-family: "Cabin", sans-serif;
+	/*font-family: "Cabin", sans-serif;*/
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	color: #111111;
 	font-weight: 400;
-	font-family: "Lora", serif;
+	/*font-family: "Lora", serif;*/
 }
 h1 {
 	font-size: 70px;
@@ -2672,7 +2672,58 @@ h1 {
 }
 
 .editButton:hover{
-    background-color: #00BFFF; /* 더 밝은 하늘색 */
+    background-color: rgb(240, 77, 77); /* 더 밝은 하늘색 */
     transform: scale(1.05);
+}
+
+.accessButton{
+	background-color: #64bd7a; /*  */
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.accessButton:hover{
+    background-color: rgb(240, 77, 77); /* 더 밝은 하늘색 */
+    transform: scale(1.05);
+}
+
+.returnButton{
+	background-color: #f04d4d; /*  */
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.returnButton:hover{
+    background-color: rgb(240, 77, 77); /* 더 밝은 하늘색 */
+    transform: scale(1.05);
+}
+
+/* 심심이페이지 */
+.simsimeHeaderRow{
+	margin-top: 3rem;
+}
+.simsimeContainer{
+	margin-top: 3rem;
+	margin-bottom: 5rem;
+}
+.simsimeRow{
+	margin-top: 1rem;
 }
 
