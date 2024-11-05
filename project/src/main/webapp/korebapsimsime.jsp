@@ -26,105 +26,41 @@
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/starPlugin.css" type="text/css">
+<link rel="stylesheet" href="css/kosimeCss.css" type="text/css">
 <title>고래밥 심심이</title>
-<style>
-    .message {
-        border-top: 1px solid #ccc;
-        padding: 10px;
-        margin-top: 5px;
-        background-color: #e6e6e6;
-    }
-    #chat-container {
-        width: 400px;
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #ccc;
-    }
-    #chat-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 10px;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    #user-input {
-        display: flex;
-        padding: 10px;
 
-    }
-    #user-input input {
-        flex: 1;
-        padding: 10px;
-        outline: none;
-    }
-    #user-input button {
-        border: none;
-        background-color: #1e88e5;
-        color: white;
-        padding: 10px 15px;
-        cursor: pointer;
-    }
-</style>
 </head>
 <body>
 <c:import url="header.jsp"></c:import>
 
-<div class="container">
-	<div class="row simsimeHeaderRow">
-		<div class="col-lg-10 offset-lg-1">
-			<div class="bd-hero-text">
-				<h1>⚓낚시 천재 고심이⚓</h1>
+<div id="background" class="kosimePage">
+	<div class="container kosimePageContainer">
+		<div class="row simsimeHeaderRow">
+			<div class="col-lg-10 offset-lg-1">
+				<div class="bd-hero-text">
+					<h1>⚓낚시 천재 고심이⚓</h1>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row simsimeRow">
-		<div class="col-lg-10 offset-lg-1">
-			<div class="bd-hero-text">
-				<h3>천재 낚시꾼 고심이(고래밥 심심이)에게 낚시 꿀팁을 물어보세요.</h3>
+		<div class="row simsimeRow">
+			<div class="col-lg-10 offset-lg-1">
+				<div class="bd-hero-text">
+					<h3>천재 낚시꾼 고심이(고래밥 심심이)에게 낚시 꿀팁을 물어보세요.</h3>
+					<p class="mt-2">고심이와의 대화 내용은 저장되지 않습니다.</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div id="chat-container" class="container simsimeContainer">
-	    <div id="chat-messages"></div>
-	    <div id="user-input">
-	        <input type="text" placeholder="메시지를 입력하세요..." />
-	        <button>전송</button>
-	    </div>
+		<div id="chat-container" class="container simsimeContainer">
+		    <div id="chat-messages"></div>
+		    <div id="user-input">
+		        <input type="text" placeholder="메시지를 입력하세요..." />
+		        <button>전송</button>
+		    </div>
+		</div>
 	</div>
 </div>
-
 <c:import url="footer.jsp"></c:import>
 
 <script src="js/chatbot.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
